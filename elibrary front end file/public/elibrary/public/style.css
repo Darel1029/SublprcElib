@@ -1,0 +1,1523 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+
+.active {
+
+    color: #eeece6;
+
+    text-decoration: underline;
+
+    font-weight: bold;
+
+}
+
+
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    padding: 0 50px;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+
+
+    background-color: #F2B50B;
+
+    color: black;
+
+    z-index: 1000;
+
+}
+
+
+
+/* LEFT SIDE GROUP */
+
+.left-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+
+/* Logos */
+
+.logo-img {
+
+    height: 90px;
+
+    width: auto;
+
+}
+
+
+
+.logo2-img {
+
+    height: 70px;
+
+    width: auto;
+
+}
+
+
+
+/* Text */
+
+.nav-title {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    font-style: normal;
+
+    font: optional;
+
+}
+
+
+
+/* Nav links */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+.nav-links li {
+
+    display: flex;
+
+    align-items: center;
+
+    font: bold;
+
+}
+
+
+
+/* NAVIGATION LINK STYLE */
+
+.nav-links a {
+
+    color: black;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: color 0.3s ease;
+
+}
+
+/* NAVIGATION LINK STYLE */
+
+.nav-links a {
+
+    color: black;           /* keeps contrast with navbar */
+
+    font-weight: 600;       /* makes it bold */
+
+    font-size: 18px;        /* adjust to your preferred size */
+
+    transition: color 0.3s ease, transform 0.2s ease;
+
+    position: relative;     /* for hover underline effect */
+
+}
+
+
+
+/* OPTIONAL: HOVER EFFECT */
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0%;
+
+    height: 2px;
+
+    background-color: maroon;
+
+    transition: width 0.3s ease;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: maroon;
+
+}
+
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+
+/* HOVER EFFECT */
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0%;
+
+    height: 2px;
+
+    background-color: maroon;
+
+    transition: width 0.3s ease;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: maroon;
+
+}
+
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+home-page .about-link {
+
+    display: none;
+
+}
+
+/* Mobile toggle class */
+
+.mobile-menu {
+
+    margin-top: 0px;
+
+    border-bottom-right-radius: 30%;
+
+}
+
+
+
+header {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 180px);
+
+    display: flex;
+
+    align-items: center;      /* vertical center */
+
+    justify-content: center;  /* horizontal center */
+
+
+
+    overflow: hidden;
+
+}
+
+
+
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+
+
+    background-image: url('../image/2nd.jpg');
+
+    background-position: bottom;
+
+    background-size: cover;
+
+
+
+    filter: blur(5px);          /* Adjust blur strength here */
+
+    transform: scale(1.1);      /* Prevents edge cut from blur */
+
+    z-index: -1;
+
+}
+
+
+
+
+
+.header-content {
+
+   
+
+    color: white;
+
+    text-align: center;
+
+    transform: translateY(-40px);
+
+}
+
+.search-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+
+.search-input {
+
+    padding: 10px 15px;
+
+    width: 500px;
+
+    max-width: 100%;
+
+    border-radius: 25px;
+
+    border: 1px solid #ccc;
+
+    outline: none;
+
+}
+
+
+
+.search-btn {
+
+    padding: 12px 25px;
+
+    font-size: 16px;
+
+    border-radius: 25px;
+
+    border: none;
+
+    background-color: #f9c400;
+
+    color: black;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+
+
+.search-btn:hover {
+
+    background-color: #e0b000;
+
+}
+
+.header-content h2 {
+
+    font-size: 7vmin;
+
+    margin: 0;
+
+}
+
+
+
+.line {
+
+    width: 250px;
+
+    height: 4px;
+
+    background: #d9b653;
+
+    margin: 10px auto;
+
+    border-radius: 5px;
+
+}
+
+
+
+.header-content h1 {
+
+    font-size: 7vmin;
+
+    margin-top: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+about-btn {
+
+
+
+    display: inline-block;
+
+
+
+    margin-top: 15px;
+
+
+
+    padding: 10px 25px;
+
+
+
+    background-color: #ffcc00; /* Gold to match your Search button */
+
+
+
+    color: #000;
+
+
+
+    text-decoration: none;
+
+
+
+    font-weight: bold;
+
+
+
+    border-radius: 30px; /* Makes it a pill shape */
+
+
+
+    transition: all 0.3s ease;
+
+
+
+}
+
+
+
+
+
+
+
+.about-btn:hover {
+
+
+
+    background-color: #e6b800; /* Darker gold */
+
+
+
+    transform: translateY(-2px); /* Slight lift */
+
+
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+
+
+}
+
+/* BUTTON */
+
+.ctn {
+
+    font-weight: 600px;
+
+    display: inline-block;
+
+    margin-top: 20px; /* equal spacing from line */
+
+    padding: 8px 20px;
+
+    background:#d9b653;
+
+    border-radius: 30px;
+
+    color: black;
+
+   
+
+}
+
+
+
+
+
+.nav-ctn {
+
+    margin-top: 0;  /* keep aligned with nav */
+
+}
+
+
+
+/* HERO LEARN MORE BUTTON */
+
+.hero-ctn {
+
+    margin-top: 20px; /* control this independently */
+
+}
+
+
+
+/* MENU BUTTON */
+
+
+
+.menu-btn {
+
+    display: none; /* hidden by default, only shows on mobile */
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: 35px;
+
+    height: 25px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+}
+
+
+
+.menu-btn {
+
+    display: none; /* hidden by default, only shows on mobile */
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: 35px;
+
+    height: 25px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media only screen and (max-width: 850px) {
+
+    .menu-btn {
+
+        display: flex; /* Show the hamburger icon */
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+
+    .nav-links {
+
+        position: fixed; /* Fixes it to the viewport */
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100vh; /* Full screen height */
+
+        background: rgba(128, 0, 0, 0.95); /* Maroon with slight transparency */
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 30px;
+
+       
+
+        /* Hidden state */
+
+        transform: translateX(100%); /* Slide in from right */
+
+        transition: transform 0.4s ease-in-out;
+
+        z-index: 1000;
+
+        visibility: hidden;
+
+    }
+
+
+
+    /* Active state when menu is clicked */
+
+    .nav-links.mobile-menu {
+
+        transform: translateX(0);
+
+        visibility: visible;
+
+    }
+
+
+
+    .nav-links li {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+
+    .nav-links li a {
+
+        font-size: 24px; /* Larger text for mobile fingers */
+
+        color: white;
+
+        display: block;
+
+        padding: 20px;
+
+    }
+
+
+
+    /* Optional: Hide specific desktop elements if needed */
+
+    .left-group { gap: 10px; }
+
+    .nav-title { font-size: 16px; }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+    .search-container {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .search-input {
+
+        width: 90%;
+
+    }
+
+
+
+    .search-btn {
+
+        width: 50%;
+
+    }
+
+
+
+}
+
+/* ===========================
+
+   FOOTER STYLING
+
+=========================== */
+
+
+
+.footer {
+
+    background-color: #f9c400;
+
+    color: black;
+
+    padding: 40px 20px 20px 20px;
+
+    margin-top: 0;   /* remove gap */
+
+}
+
+
+
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+}
+
+
+
+.footer-section {
+
+    flex: 1;
+
+    min-width: 250px;
+
+}
+
+
+
+.footer-section h3,
+
+.footer-section h4 {
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.footer-section p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+
+.footer-section ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+.footer-section ul li {
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.footer-section ul li a {
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.footer-section ul li a:hover {
+
+    color: #38bdf8;
+
+}
+
+
+
+.footer-bottom {
+
+    text-align: center;
+
+    margin-top: 60px;
+
+    border-top: 1px solid #334155;
+
+    padding-top: 15px;
+
+    font-size: 13px;
+
+}
+
+
+
+/* ===========================
+
+   ABOUT PAGE STYLING
+
+=========================== */
+
+
+
+.about-header {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 50vh;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+
+.about-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url('../image/2nd.jpg');
+
+    background-position: center;
+
+    background-size: cover;
+
+    filter: blur(4px);
+
+    transform: scale(1.1);
+
+    z-index: -1;
+
+}
+
+
+
+.about-section {
+
+    padding: 80px 10%;
+
+    background-color: #f9f9f9;
+
+}
+
+
+
+.about-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+
+.about-container h2 {
+
+    margin-top: 40px;
+
+    margin-bottom: 15px;
+
+    color: #222;
+
+}
+
+
+
+.about-container p {
+
+    margin-bottom: 20px;
+
+    line-height: 1.7;
+
+    color: #444;
+
+    text-align: justify;
+
+}
+
+/* ===========================
+
+   LOGIN SECTION
+
+=========================== */
+
+/* ===========================
+
+   LOGIN MODAL
+
+=========================== */
+
+
+
+.login-modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 2000;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.login-box {
+
+    background: white;
+
+    padding: 40px;
+
+    width: 100%;
+
+    max-width: 400px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    position: relative;
+
+    animation: fadeIn 0.3s ease;
+
+}
+
+
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 25px;
+
+    border: 1px solid #ccc;
+
+}
+
+
+
+.login-btn {
+
+    width: 100%;
+
+    cursor: pointer;
+
+}
+
+
+
+.close-btn {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+
+#login-message {
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    color: red;
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from { transform: scale(0.8); opacity: 0; }
+
+    to { transform: scale(1); opacity: 1; }
+
+}
+
+/* ADMIN PAGE SPECIFIC STYLES */
+
+.admin-header {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding-top: 90px; /* Space for fixed navbar */
+
+    overflow: hidden;
+
+}
+
+
+
+/* Reusing your homepage background effect */
+
+.admin-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0; left: 0; width: 100%; height: 100%;
+
+    background-image: url('../image/2nd.jpg'); /* Same as homepage */
+
+    background-position: center;
+
+    background-size: cover;
+
+    filter: blur(8px);
+
+    transform: scale(1.1);
+
+    z-index: -1;
+
+}
+
+
+
+.admin-container {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 20px;
+
+    z-index: 1;
+
+}
+
+
+
+/* Styling the inputs to match your search bar */
+
+.admin-container input {
+
+    width: 100%;
+
+    padding: 12px 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 25px;
+
+    border: 1px solid #ccc;
+
+    outline: none;
+
+    font-size: 16px;
+
+}/* INVENTORY TABLE STYLING */
+
+.inventory-section {
+
+    padding: 50px 10%;
+
+    background-color: #f4f4f4; /* Light contrast to the header */
+
+}
+
+
+
+.inventory-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+
+.table-wrapper {
+
+    overflow-x: auto; /* Makes it responsive for mobile */
+
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: left;
+
+}
+
+
+
+th {
+
+    background-color: #F2B50B; /* Matches your Navbar color */
+
+    color: black;
+
+    padding: 15px;
+
+    font-weight: bold;
+
+}
+
+
+
+td {
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+
+tr:hover {
+
+    background-color: #fff9e6; /* Subtle hover effect */
+
+}
+
+
+
+.delete-btn {
+
+    background-color: #ff4d4d;
+
+    color: white;
+
+    border: none;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+.table-wrapper {
+
+    overflow-x: auto; /* Allows side-scrolling on small screens */
+
+    margin-top: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+}
+
+
+
+table {
+
+    width: 100%;
+
+    min-width: 1200px; /* Ensures the table doesn't squash the text */
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+
+}
+
+
+
+th {
+
+    background-color: #F2B50B; /* Matches your Navbar */
+
+    padding: 10px;
+
+    position: sticky;
+
+    top: 0;
+
+}
+
+
+
+td {
+
+    padding: 8px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+
+.delete-btn {
+
+    background-color: #ff4444;
+
+    color: white;
+
+    border: none;
+
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+
+.delete-btn:hover {
+
+    background-color: #cc0000;
+
+}
+
+/* Update your CSS to handle the multi-column form */
+
+.login-box {
+
+    max-width: 800px !important; /* Make it wider for the inventory form */
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr; /* Two columns */
+
+    gap: 15px;
+
+    padding: 30px;
+
+}
+
+
+
+.login-box h2, .login-box .line, .login-box .search-btn {
+
+    grid-column: span 2; /* These span across both columns */
+
+}
+
+
+
+/* Make it single column on mobile */
+
+@media (max-width: 600px) {
+
+    .login-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .login-box h2, .login-box .line, .login-box .search-btn {
+
+        grid-column: span 1;
+
+    }
+
+}
+
+/* Sidebar Layout */
+
+.admin-dashboard {
+
+    display: flex;
+
+    background-color: #f4f4f4;
+
+    min-height: 100vh;
+
+}
+
+
+
+.sidebar {
+
+    width: 250px;
+
+    background-color: #F2B50B; /* Match your gold theme */
+
+    color: #333;
+
+    padding: 20px;
+
+    position: fixed;
+
+    height: 100%;
+
+}
+
+
+
+.sidebar-header { text-align: center; margin-bottom: 30px; }
+
+.sidebar-logo { width: 60px; }
+
+
+
+.sidebar-links { list-style: none; padding: 0; }
+
+.sidebar-links li {
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    margin-bottom: 5px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.sidebar-links li:hover, .sidebar-links li.active {
+
+    background: rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+.sidebar-links a { text-decoration: none; color: inherit; }
+
+
+
+/* Main Content area */
+
+.main-content {
+
+    margin-left: 250px;
+
+    padding: 40px;
+
+    width: 100%;
+
+}
+
+
+
+.dashboard-box {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+/* Grid for Add Book Form */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.form-grid input { width: 100%; }
+
+
+
+/* Delete Button Style */
+
+.delete-btn {
+
+    background-color: #ff4444;
+
+    color: white;
+
+    border: none;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}

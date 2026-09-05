@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="A digital library system designed to manage and access learning resources efficiently for LGRRC.">
+  <title>E-Library | SUB-LGRRC</title>
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="icon" type="image/png" href="./public/image/Sub-LGRRC%20No%20BG.png">
+</head>
+
+<body class="home-page">
+
+  <nav class="navbar">
+    <div class="left-group">
+      <img src="./image/image.png" class="logo2-img" alt="DILG">
+      <img src="./image/Sub-LGRRC No BG.png" class="logo-img" alt="Logo">
+      <div class="nav-text-wrapper">
+        <h2 class="nav-title">Local Governance Provincial Resource Center</h2>
+        <span class="nav-subtitle">DILG Misamis Occidental Region X </span>
+      </div>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+    <div class="menu-btn" onclick="toggleMobileMenu()">
+      <img src="./image/download.png" alt="menu-btn" class="menu-icon">
+    </div>
+  </nav>
+
+  <header>
+    <div class="header-content">
+      <div class="search-container" style="position:relative;">
+        <input type="text" id="main-search-input" placeholder="Search books or publications..." class="search-input">
+        <button id="main-search-btn" class="search-btn">Search</button>
+        <div id="search-results-panel" style="
+          display:none;
+          position:absolute;
+          top: calc(100% + 8px);
+          left:0; right:0;
+          background:#fff;
+          border-radius:12px;
+          box-shadow:0 8px 30px rgba(0,0,0,0.15);
+          max-height:360px;
+          overflow-y:auto;
+          z-index:9999;
+          text-align:left;
+        "></div>
+      </div>
+
+      <h1>E-Library</h1>
+      <div class="line"></div>
+    </div>
+  </header>
+  <div class="login-modal" id="login-modal">
+    <div class="login-box">
+      <span class="close-btn" onclick="document.getElementById('login-modal').style.display='none'">&times;</span>
+      <h2>Log In</h2>
+      <div class="line"></div>
+      <form id="login-form">
+        <div class="login-input-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="Your account email" required>
+        </div>
+        <div class="login-input-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Your password" required>
+        </div>
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="book-modal" id="book-modal">
+    <div class="book-modal-content">
+      <span class="close-btn" onclick="closeBookModal()">&times;</span>
+      <div id="book-modal-details"></div>
+    </div>
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>LGPRC E-Library</h3>
+        <p>A digital library system designed to manage and access learning resources efficiently.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#" onclick="openLoginModal(); return false;">Librarian Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Information</h4>
+        <p>Email: sublgrrcmisamisoccidental@gmail.com</p>
+        <p>Phone: (088) 531 1007</p>
+        <p>Oroquieta City,Misamis Occidental, Philippines</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SUB-LGRRC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    function toggleMobileMenu() {
+      const nav = document.getElementById('nav-links');
+      if (nav) nav.classList.toggle('active');
+    }
+    function openLoginModal() {
+      const modal = document.getElementById('login-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+  </script>
+</body>
+
+</html>

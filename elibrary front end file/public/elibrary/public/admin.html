@@ -1,0 +1,156 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - E-Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="admin-page">
+
+
+
+    <nav class="navbar">
+
+        <div class="left-group">
+
+            <img src="./image/Sub-LGRRC No BG.png" alt="" class="logo-img">
+
+            <h2 class="nav-title">SUB-LGRRC</h2>
+
+            <img src="./image/new.png" alt="" class="logo2-img">
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="active"><a href="admin.html">Admin</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <header class="admin-header">
+
+        <div class="admin-container">
+
+            <div class="login-box" style="display: block; position: relative; margin: 0 auto; max-width: 600px;">
+
+    <h2>Add New Book</h2>
+
+    <div class="line"></div>
+
+   
+
+    <input type="text" id="title" placeholder="Book Title">
+
+    <input type="text" id="author" placeholder="Author">
+
+   
+
+    <input type="number" id="quantity" placeholder="Quantity">
+
+    <input type="text" id="category" placeholder="Category">
+
+   
+
+    <input type="text" id="mediaType" placeholder="Media Type">
+
+    <input type="text" id="catalogNumber" placeholder="Catalog Number">
+
+   
+
+    <input type="text" id="sourceLink" placeholder="Source/Links">
+
+    <input type="text" id="publishDate" placeholder="Publish Date">
+
+   
+
+    <input type="text" id="volume" placeholder="Volume/Version">
+
+    <input type="text" id="accessibility" placeholder="Accessibility">
+
+   
+
+    <input type="text" id="location" placeholder="Location">
+
+    <input type="text" id="custodian" placeholder="Custodian">
+
+
+
+    <button class="search-btn" style="width: 100%; margin-top: 10px;" onclick="addBook()">Add to Inventory</button>
+
+</div>
+
+        </div>
+
+    </header>
+
+<section class="inventory-section">
+
+    <div class="inventory-container">
+
+        <h2>Library Inventory</h2>
+
+        <div class="line"></div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Title</th>
+
+                        <th>Author</th>
+
+                        <th>Qty</th>
+
+                        <th>Cat.</th> <th>Media</th>
+
+                        <th>Cat#</th> <th>Source</th>
+
+                        <th>Pub.</th> <th>Vol.</th>
+
+                        <th>Access.</th>
+
+                        <th>Loc.</th>
+
+                        <th>Custodian</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="book-list-table">
+
+                    </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

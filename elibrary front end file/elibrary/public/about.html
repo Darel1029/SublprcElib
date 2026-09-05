@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SUB-LGRRC</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="left-group">
+      <img src="./image/Sub-LGRRC No BG.png" alt="" class="logo-img">
+      <h2 class="nav-title">Local Governance Provincial Resource Center</h2>
+      <img src="./image/new.png" alt="" class="logo2-img">
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+
+    <div class="menu-btn" onclick="toggleMobileMenu()">
+        <img src="./image/download.png" alt="menu-btn" class="menu-icon">
+    </div>
+  </nav>
+
+  <!-- ABOUT HERO SECTION -->
+  <header class="about-header">
+    <div class="header-content">
+      <h1>About SUB-LGRRC</h1>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <!-- ABOUT CONTENT -->
+  <section class="about-section">
+    <div class="about-container">
+      <h2>What is LGRRC?</h2>
+      <p>
+        The Local Governance Resource Center (LGRRC) is a knowledge management facility 
+        established by the Department of the Interior and Local Government (DILG). 
+        It serves as a central hub for governance-related information, learning materials, 
+        policy references, and capacity development resources intended for Local Government Units (LGUs).
+      </p>
+
+      <p>
+        LGRRC aims to strengthen local governance by providing access to research-based 
+        materials, training modules, best practices documentation, and development frameworks 
+        that support transparency, accountability, and effective public service delivery.
+      </p>
+
+      <p>
+        The Sub-LGRRC functions as an extension of the regional and provincial governance 
+        support system, ensuring that LGUs and stakeholders have accessible, updated, 
+        and relevant information to enhance institutional capacity and promote sustainable development.
+      </p>
+
+      <h2>Our Mission</h2>
+      <p>
+        To empower local government units through knowledge sharing, capacity-building 
+        initiatives, and access to comprehensive governance resources.
+      </p>
+
+      <h2>Our Vision</h2>
+      <p>
+        A responsive and innovative knowledge center that supports excellence in local governance.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>LGPRC E-Library</h3>
+        <p>A digital library system designed to manage and access learning resources efficiently and effectively.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#" id="footer-login">Librarian Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Information</h4>
+        <p>Email: info@sublgrrc.gov.ph</p>
+        <p>Phone: (088) 123-4567</p>
+        <p>Misamis Occidental, Philippines</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SUB-LGRRC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- LOGIN MODAL (outside footer) -->
+  <div id="login-modal" class="login-modal">
+    <div class="login-box">
+      <span id="close-login" class="close-btn">&times;</span>
+      <form id="login-form">
+        <h2>Log In</h2>
+        <div class="login-input-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="Your account email" required>
+        </div>
+        <div class="login-input-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Your password" required>
+        </div>
+        <button type="submit" class="ctn login-btn">Log In</button>
+        <p id="login-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script type="module" src="app.js"></script>
+
+  <script>
+    // Menu toggle & login modal
+    document.addEventListener("DOMContentLoaded", () => {
+      const openLogin = document.getElementById("footer-login");
+      const loginModal = document.getElementById("login-modal");
+      const closeLogin = document.getElementById("close-login");
+
+      if (openLogin && loginModal) {
+        openLogin.addEventListener("click", (e) => {
+          e.preventDefault();
+          loginModal.style.display = "flex";
+        });
+      }
+
+      if (closeLogin && loginModal) {
+        closeLogin.addEventListener("click", () => {
+          loginModal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+          if (e.target === loginModal) {
+            loginModal.style.display = "none";
+          }
+        });
+      }
+    });
+
+    function toggleMobileMenu() {
+        const nav = document.getElementById('nav-links');
+        if(nav) nav.classList.toggle('active');
+    }
+    function openLoginModal() {
+        const modal = document.getElementById('login-modal');
+        if(modal) modal.style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>

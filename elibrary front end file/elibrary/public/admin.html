@@ -1,0 +1,194 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - E-Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="admin-page">
+
+
+
+    <nav class="navbar">
+
+        <div class="left-group">
+
+            <img src="./image/Sub-LGRRC No BG.png" alt="" class="logo-img">
+
+            <h2 class="nav-title">SUB-LGRRC</h2>
+
+            <img src="./image/new.png" alt="" class="logo2-img">
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="active"><a href="admin.html">Admin</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <header class="admin-header">
+
+        <div class="admin-container">
+
+            <div class="add-book-box">
+    <h2>Add New Book</h2>
+    <div class="line"></div>
+    <div class="form-grid">
+        <div class="input-group">
+            <label>Item Type</label>
+            <select id="itemType">
+                <option value="catalog">Catalog (Book)</option>
+                <option value="publication">Publication</option>
+            </select>
+        </div>
+        <div class="input-group" style="grid-column: 1 / -1;">
+            <label>Cover Image</label>
+            <input type="file" id="coverImage" accept="image/*" onchange="previewCover(this)" style="padding:6px;">
+            <div style="margin-top:8px;">
+                <img id="cover-preview" src="" alt="Preview" style="display:none; max-height:140px; border-radius:8px; border:1px solid #ddd; object-fit:cover;">
+            </div>
+        </div>
+        <div class="input-group">
+            <label>Book Title</label>
+            <input type="text" id="title" placeholder="e.g. History of ...">
+        </div>
+        <div class="input-group">
+            <label>Author</label>
+            <input type="text" id="author" placeholder="e.g. John Doe">
+        </div>
+        <div class="input-group">
+            <label>Quantity</label>
+            <input type="number" id="quantity" placeholder="e.g. 5">
+        </div>
+        <div class="input-group">
+            <label>Category</label>
+            <input type="text" id="category" placeholder="e.g. Fiction">
+        </div>
+        <div class="input-group">
+            <label>Media Type</label>
+            <input type="text" id="mediaType" placeholder="e.g. Hardcover">
+        </div>
+        <div class="input-group">
+            <label>Catalog Number</label>
+            <input type="text" id="catalogNumber" placeholder="e.g. 123-456">
+        </div>
+        <div class="input-group">
+            <label>Source/Links</label>
+            <input type="text" id="sourceLink" placeholder="URL or info">
+        </div>
+        <div class="input-group">
+            <label>Publish Date</label>
+            <input type="date" id="publishDate" placeholder="YYYY-MM-DD">
+        </div>
+        <div class="input-group">
+            <label>Volume/Version</label>
+            <input type="text" id="volume" placeholder="e.g. Vol 1">
+        </div>
+        <div class="input-group">
+            <label>Accessibility</label>
+            <input type="text" id="accessibility" placeholder="e.g. Public">
+        </div>
+        <div class="input-group">
+            <label>Location</label>
+            <input type="text" id="location" placeholder="e.g. Shelf A">
+        </div>
+        <div class="input-group">
+            <label>Custodian</label>
+            <input type="text" id="custodian" placeholder="e.g. Admin">
+        </div>
+    </div>
+    <button class="submit-btn" onclick="addBook()">Add to Inventory</button>
+</div>
+
+        </div>
+
+    </header>
+
+<section class="inventory-section">
+
+    <div class="inventory-container">
+
+        <h2>Library Inventory</h2>
+
+        <div class="line"></div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Title</th>
+
+                        <th>Author</th>
+
+                        <th>Qty</th>
+
+                        <th>Cat.</th> <th>Media</th>
+
+                        <th>Cat#</th> <th>Source</th>
+
+                        <th>Pub.</th> <th>Vol.</th>
+
+                        <th>Access.</th>
+
+                        <th>Loc.</th>
+
+                        <th>Custodian</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="book-list-table">
+
+                    </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+    <script type="module" src="app.js"></script>
+    <script>
+        function previewCover(input) {
+            const preview = document.getElementById('cover-preview');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.src = '';
+                preview.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
